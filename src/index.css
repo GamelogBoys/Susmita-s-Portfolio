@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  /* Navy Blue tones */
+  --color-navy-50: #f4f7fe;
+  --color-navy-100: #e8effd;
+  --color-navy-200: #d5e2fb;
+  --color-navy-300: #b5ccf7;
+  --color-navy-400: #8daaf2;
+  --color-navy-500: #6282ea;
+  --color-navy-600: #415fdc;
+  --color-navy-700: #2d45c0;
+  --color-navy-800: #1a2a4a; /* Main deep navy background for dark elements */
+  --color-navy-900: #0f1a30; /* Extra deep navy */
+  --color-navy-950: #080f1e; /* Absolute deep rich dark background */
+
+  /* Gold accents */
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #faf3e5;
+  --color-gold-200: #f2e3be;
+  --color-gold-300: #e8cc8c;
+  --color-gold-400: #dda955;
+  --color-gold-500: #cda24e; /* Primary rich gold accent */
+  --color-gold-600: #b5833c;
+  --color-gold-700: #93622e;
+  --color-gold-800: #714624;
+  --color-gold-900: #55341d;
+  --color-gold-950: #2e1a0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom fade entries and styling overrides */
+::selection {
+  background-color: var(--color-gold-200);
+  color: var(--color-navy-950);
+}
+
+.dark ::selection {
+  background-color: var(--color-gold-800);
+  color: var(--color-gold-100);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Extra premium background elements */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.2;
+  }
+  33% {
+    transform: scale(1.1) translate(30px, -30px);
+    opacity: 0.35;
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, 20px);
+    opacity: 0.15;
+  }
+}
+
+.animate-pulse-glow-1 {
+  animation: pulseGlow 15s infinite ease-in-out;
+}
+
+.animate-pulse-glow-2 {
+  animation: pulseGlow 20s infinite ease-in-out reverse;
+}
+
