@@ -19,7 +19,7 @@ export default function About() {
   const { personalInfo, personalDetails } = portfolioData;
 
   // Let's grab the generated image path dynamically or use fallback
-  const avatarUrl = "./src/assets/images/susmita_saha_profile_1779861948800.png";
+  const avatarUrl = "https://github.com/GamelogBoys/Susmita-s-Portfolio/blob/main/src/assets/images/susmita_saha_profile_1779861948800.png";
 
   return (
     <section 
